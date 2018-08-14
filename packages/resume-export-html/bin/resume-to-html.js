@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 const fs = require("fs");
+const { promisify } = require("util");
 const minimist = require("minimist");
 const getStream = require("get-stream");
 const { render } = require("../index");
 const packageJson = require("../package.json");
 const args = minimist(process.argv.slice(2));
+const [filename, outputFilename] = args._;
 
-if (args.h || args.help) {
+if (!filename || !outputFilename || args.h || args.help) {
   process.stdout.write(`
-${packageJson.name} [-t <theme>] <filename.json> > output.html
-${packageJson.name} [-t <theme>] < <filename.json> > output.html
+${packageJson.name} [-t <theme>] resume.json resume.html
 
 ${packageJson.description}
 `);
@@ -17,13 +18,9 @@ ${packageJson.description}
   process.exit(1);
 }
 
-getStream(args._.length ? fs.createReadStream(args._[0]) : process.stdin)
+getStream(fs.createReadStream(filename))
   .then(resume => render(JSON.parse(resume), args.theme || args.t))
-  .then(html => {
-    process.stdout.write(html);
-
-    process.exit(0);
-  })
+  .then(html => promisify(fs.writeFile.bind(fs))(outputFilename, html))
   .catch(e => {
     console.error(e);
 

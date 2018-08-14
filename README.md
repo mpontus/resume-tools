@@ -22,13 +22,13 @@ npx resume-server [-t <theme>] [-p <port>] resume.json
 Save resume as HTML:
 
 ```
-npx resume-export-html [-t theme] < resume.json > resume.html
+npx resume-export-html [-t <theme>] resume.json resume.html
 ```
 
 Save resume as PDF:
 
 ```
-npx resume-export-html [-t theme] resume.json resume.html
+npx resume-export-pdf [-t <theme>] resume.json resume.html
 ```
 
 ## License
