@@ -1,6 +1,6 @@
 {
   "name": "resume-export-pdf",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Export resume in JSON Resume format as PDF",
   "main": "index.js",
   "author": "Mikhail Pontus",
@@ -9,6 +9,6 @@
     "get-stream": "^4.0.0",
     "minimist": "^1.2.0",
     "puppeteer": "^1.7.0",
-    "resume-export-html": "^1.0.0"
+    "resume-export-html": "^0.1.0"
   }
 }
