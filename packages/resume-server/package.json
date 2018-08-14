@@ -1,0 +1,16 @@
+{
+  "name": "resume-server",
+  "version": "1.0.0",
+  "description": "HTTP server which renders resume in JSON Resume format",
+  "main": "index.js",
+  "bin": {
+    "resume-server": "bin/resume-server.js"
+  },
+  "author": "Mikhail Pontus",
+  "license": "MIT",
+  "dependencies": {
+    "get-stream": "^4.0.0",
+    "minimist": "^1.2.0",
+    "resume-export-html": "^1.0.0"
+  }
+}
