@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-const fs = require("fs");
 const minimist = require("minimist");
-const getStream = require("get-stream");
 const createServer = require("../index");
 const packageJson = require("../package.json");
 
@@ -23,12 +21,10 @@ ${packageJson.description}
   process.exit(1);
 }
 
-getStream(fs.createReadStream(filename)).then(resume => {
-  const server = createServer(JSON.parse(resume), args.theme || args.t);
+const server = createServer(filename, args.theme || args.t);
 
-  server.listen(port, HOST, () => {
-    const { address, port } = server.address();
+server.listen(port, HOST, () => {
+  const { address, port } = server.address();
 
-    console.log(`Server listening on http://${address}:${port}/`);
-  });
+  console.log(`Server listening on http://${address}:${port}/`);
 });
