@@ -1,6 +1,6 @@
 # Resume to HTML
 
-> Render resume in JSON Resume format as HTML
+> Export resume in JSON Resume format to HTML
 
 ### Usage
 

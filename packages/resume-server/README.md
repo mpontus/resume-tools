@@ -1,6 +1,6 @@
 # Resume Server
 
-> HTTP server for rendering JSON Resume
+> HTTP server for rendering resume in JSON Resume format
 
 ### Usage
 
