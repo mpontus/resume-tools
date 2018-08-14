@@ -3,17 +3,18 @@ const fs = require("fs");
 const minimist = require("minimist");
 const getStream = require("get-stream");
 const { render } = require("../index");
+const packageJson = require("../package.json");
 const args = minimist(process.argv.slice(2));
 
 if (args.h || args.help) {
   process.stdout.write(`
-resume-export-html [-t <theme>] <filename.json> > output.html
-resume-export-html [-t <theme>] < <filename.json> > output.html
+${packageJson.name} [-t <theme>] <filename.json> > output.html
+${packageJson.name} [-t <theme>] < <filename.json> > output.html
 
-Convert resume in JSON Resume format to HTML.
-    `);
+${packageJson.description}
+`);
 
-  process.exit(0);
+  process.exit(1);
 }
 
 getStream(args._.length ? fs.createReadStream(args._[0]) : process.stdin)
@@ -25,5 +26,6 @@ getStream(args._.length ? fs.createReadStream(args._[0]) : process.stdin)
   })
   .catch(e => {
     console.error(e);
-    process.exit(0);
+
+    process.exit(1);
   });

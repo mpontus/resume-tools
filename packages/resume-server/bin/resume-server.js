@@ -4,6 +4,7 @@ const minimist = require("minimist");
 const getStream = require("get-stream");
 const render = require("resume-to-html");
 const createServer = require("../index");
+const packageJson = require("../package.json");
 
 const DEFAULT_PORT = 4000;
 const HOST = process.env.HOST || "0.0.0.0";
@@ -15,12 +16,12 @@ const filename = args._[0];
 
 if (!filename || args.h || args.help) {
   process.stdout.write(`
-resume-serve [-p <port>] [-t <theme>] <filename>
+${packageJson.name} [-p <port>] [-t <theme>] <filename>
 
-Start JSON Resume rendering server.
+${packageJson.description}
 `);
 
-  process.exit(0);
+  process.exit(1);
 }
 
 getStream(fs.createReadStream(filename)).then(resume => {

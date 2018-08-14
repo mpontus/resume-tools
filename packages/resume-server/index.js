@@ -20,8 +20,6 @@ const createServer = (resume, theme) =>
     } catch (e) {
       console.error(e);
 
-      console.log({ e, stack: e.stack });
-
       res.write(e.stack);
     } finally {
       res.end();
