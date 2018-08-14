@@ -1,6 +1,6 @@
 {
   "name": "resume-server",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "HTTP server which renders resume in JSON Resume format",
   "main": "index.js",
   "bin": {
@@ -11,6 +11,6 @@
   "dependencies": {
     "get-stream": "^4.0.0",
     "minimist": "^1.2.0",
-    "resume-export-html": "^0.1.0"
+    "resume-export-html": "^1.0.0"
   }
 }
