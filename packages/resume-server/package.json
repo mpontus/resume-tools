@@ -1,18 +1,17 @@
 {
   "name": "resume-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "HTTP server for rendering resume in JSON Resume format",
   "main": "index.js",
   "bin": {
     "resume-server": "bin/resume-server.js"
   },
-  "repository":
-    "https://github.com/mpontus/resume-tools/tree/master/packages/resume-server",
+  "repository": "https://github.com/mpontus/resume-tools/tree/master/packages/resume-server",
   "author": "Mikhail Pontus",
   "license": "MIT",
   "dependencies": {
     "get-stream": "^4.0.0",
     "minimist": "^1.2.0",
-    "resume-export-html": "^1.0.1"
+    "resume-export-html": "^1.0.2"
   }
 }
