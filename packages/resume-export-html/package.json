@@ -1,6 +1,6 @@
 {
   "name": "resume-export-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert resume in JSON Resume format to HTML",
   "main": "index.js",
   "bin": {
