@@ -2,7 +2,6 @@
 const fs = require("fs");
 const minimist = require("minimist");
 const getStream = require("get-stream");
-const render = require("resume-to-html");
 const createServer = require("../index");
 const packageJson = require("../package.json");
 
