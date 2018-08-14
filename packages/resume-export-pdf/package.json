@@ -1,8 +1,13 @@
 {
   "name": "resume-export-pdf",
   "version": "1.0.1",
-  "description": "Export resume in JSON Resume format as PDF",
+  "description": "Export resume in JSON Resume format to PDF",
   "main": "index.js",
+  "bin": {
+    "resume-export-pdf": "bin/resume-export-pdf.js"
+  },
+  "repository":
+    "https://github.com/mpontus/resume-tools/tree/master/packages/resume-export-pdf",
   "author": "Mikhail Pontus",
   "license": "MIT",
   "dependencies": {

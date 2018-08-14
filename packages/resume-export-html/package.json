@@ -1,12 +1,13 @@
 {
   "name": "resume-export-html",
   "version": "1.0.1",
-  "description": "Convert resume in JSON Resume format to HTML",
+  "description": "Export resume in JSON Resume format to HTML",
   "main": "index.js",
   "bin": {
     "resume-export-html": "bin/resume-export-html.js"
   },
-  "repository": "https://github.com/mpontus/resume-tools/packages/resume-to-html",
+  "repository":
+    "https://github.com/mpontus/resume-tools/tree/master/packages/resume-export-html",
   "author": "Mikhail Pontus",
   "license": "MIT",
   "dependencies": {
